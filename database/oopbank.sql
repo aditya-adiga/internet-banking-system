@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `ac`
 --
 
+CREATE DATABASE `oopbank`;
+USE `oopbank`;
+
 CREATE TABLE `ac` (
   `id` int(5) UNSIGNED ZEROFILL NOT NULL,
   `name` varchar(30) NOT NULL
@@ -36,12 +39,12 @@ CREATE TABLE `ac` (
 --
 
 INSERT INTO `ac` (`id`, `name`) VALUES
-(00001, 'Asif'),
-(00002, 'Asif'),
-(00003, 'Asif'),
-(00004, 'Asif'),
-(00005, 'Asif'),
-(00006, 'Asif');
+(00001, 'Ashwin'),
+(00002, 'Kohli'),
+(00003, 'Pujara'),
+(00004, 'Pant'),
+(00005, 'Aditya'),
+(00006, 'Kumar');
 
 -- --------------------------------------------------------
 
@@ -112,12 +115,12 @@ CREATE TABLE `branch` (
 --
 
 INSERT INTO `branch` (`Branch_name`, `Branch_city`, `Assets`) VALUES
-('Gulshan', 'Dhaka', 10000000),
-('Progoti Shoroni', 'Dhaka', 10000000),
-('Karwan Bazar', 'Dhaka', 10000000),
-('Central Road', 'Rangpur', 10000000),
-('Agrabad', 'Chittagong', 10000000),
-('Jublee Road', 'Chittagong', 10000000);
+('K R Puram', 'Bengaluru', 10000001),
+('R M Nagar', 'Bengaluru', 10000002),
+('M G Road', 'Mysuru', 10000003),
+('Devraj Urs Road', 'Mysuru', 10000004),
+('Vijayanagar', 'Mysuru', 10000005),
+('SahakarNagar', 'Bengaluru', 10000006);
 
 -- --------------------------------------------------------
 
@@ -196,17 +199,17 @@ CREATE TABLE `loan` (
 
 CREATE TABLE `user` (
   `Name` varchar(30) NOT NULL,
-  `Email` varchar(50) NOT NULL,
+  `custID` varchar(50) NOT NULL,
   `Password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+-- DROP TABLE `user`;
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`Name`, `Email`, `Password`) VALUES
-('Asif', 'asifsamy@gmail.com', '12345'),
-('Samy', 'samy_ewu@yahoo.com', '12345');
+INSERT INTO `user` (`Name`, `custID`, `Password`) VALUES
+('Asif', '123456', 'pass123'),
+('Samy', '123457', 'pass');
 
 --
 -- Indexes for dumped tables

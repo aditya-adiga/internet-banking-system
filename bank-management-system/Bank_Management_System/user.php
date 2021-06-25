@@ -12,11 +12,21 @@
 </head>
 
 <body>
+	<div style="background-image: url('img_girl.jpg');">
+	<style>
+		body {
+			background-image: url('https://i.pinimg.com/originals/53/aa/f6/53aaf6011bba6d6bb0499e1eef12c26d.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;  
+			background-size: cover;
+		}
+	</style>
+	</div>
    <div class="container">
      <nav class="navbar navbar-default">
      	<div class="container-fluid">
      		<div class="navbar-header">
-     			<a class="navbar-brand" href="index.php">Our Banking Management System</a>
+     			<a class="navbar-brand" href="index.php">HDFC Internet Banking System</a>
      		</div>
      		<ul class="nav navbar-nav pull-right">
      		    <li><a href="user.php">Home</a></li>
@@ -35,7 +45,7 @@
             <h4>2. <a href="deposit.php">Deposit Money</a></h4>
             <h4>3. <a href="withdraw.php">Withdraw Money</a></h4>
             <h4>4. <a href="transfer.php">Transfer Money</a></h4>
-            <h4>5. <a href="info.php">Show Account's Informstion</a></h4>
+            <h4>5. <a href="info.php">Show Account's Information</a></h4>
           </div>
      	<div class="panel-body">
      	  
@@ -43,8 +53,8 @@
      </div>
 
      <div class="well">
-     	<h3>www.mycompany.com
-     	   <span class="pull-right">Like Us: www.facebook.com/samy</span>
+     	<h3>www.myhdfcbank.com
+     	   <!-- <span class="pull-right">Like Us: www.facebook.com/samy</span> -->
      	</h3>
      </div>   
    	

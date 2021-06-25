@@ -41,13 +41,13 @@
                
                $rs2 = $obAccount->showAccountInfo($acNum);
 
-               if(mysql_num_rows($rs2) < 1) { 
+               if(mysqli_num_rows($rs2) < 1) { 
                   ?>
                   <p>Invalid Account Number </p><a href="deposit.php">Try again!</a>
                   <?php
                   die(mysql_error()); // TODO: better error handling
                }       
-               $row2=mysql_fetch_array($rs2);
+               $row2=mysqli_fetch_array($rs2);
             ?>
             
             <table class="table table-striped">

@@ -3,16 +3,16 @@
   include ("dbConnect.php");
   extract($_POST);
   if (isset($login)) {
-    $rs = mysql_query("select * from user where email = '$email' and password = '$password'");
-    if (mysql_num_rows($rs) < 1) {
+    $rs = mysqli_query($conn, "select * from user where custID = '$custID' and password = '$password'");
+    if (mysqli_num_rows($rs) < 1) {
       $found = "N";
     } else {
-      $_SESSION['email'] = $email;
-      $row = mysql_fetch_array($rs);
+      $_SESSION['custID'] = $custID;
+      $row = mysqli_fetch_array($rs);
       $_SESSION['name'] = $row['Name'];
     }
   }
-  if (isset($_SESSION['email'])) {
+  if (isset($_SESSION['custID'])) {
     header("Location: user.php");
    }
 
@@ -29,11 +29,21 @@
 </head>
 
 <body>
-   <div class="container">
+	<div style="background-image: url('img_girl.jpg');">
+	<style>
+		body {
+			background-image: url('https://i.pinimg.com/originals/53/aa/f6/53aaf6011bba6d6bb0499e1eef12c26d.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;  
+			background-size: cover;
+		}
+	</style>
+	</div>
+   <div class="container" align="center">
      <nav class="navbar navbar-default">
      	<div class="container-fluid">
      		<div class="navbar-header">
-     			<a class="navbar-brand" href="index.php">Our Banking Management System</a>
+     			<a class="navbar-brand" href="index.php">HDFC Internet Banking System</a>
      		</div>
      		<ul class="nav navbar-nav pull-right">
      		    <li><a href="index.php">Home</a></li>
@@ -52,12 +62,12 @@
      	<div class="panel-body">
      	  <div style="max-width: 600px; margin: 0 auto">
      		<form action="" method="post">
-     			<div class="form-group">
-     				<label for="email">Email Addres</label>
-     				<input type="text" name="email" class="form-control" />
+     			<div class="form-group" align="left">
+     				<label for="email">Customer ID</label>
+     				<input type="text" name="custID" class="form-control" />
      			</div>
 
-     			<div class="form-group">
+     			<div class="form-group" align="left">
      				<label for="password">password</label>
      				<input type="password" name="password" class="form-control" />
      			</div>
@@ -73,8 +83,8 @@
      </div>
 
      <div class="well">
-     	<h3>www.mycompany.com
-     	   <span class="pull-right">Like Us: www.facebook.com/samy</span>
+     	<h3>www.myhdfcbank.com
+     	   <!-- <span class="pull-right">Like Us: www.facebook.com/samy</span> -->
      	</h3>
      </div>   
    	

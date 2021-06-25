@@ -40,11 +40,21 @@
 </head>
 
 <body>
+<div style="background-image: url('img_girl.jpg');">
+	<style>
+		body {
+			background-image: url('https://i.pinimg.com/originals/53/aa/f6/53aaf6011bba6d6bb0499e1eef12c26d.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;  
+			background-size: cover;
+		}
+	</style>
+	</div>
    <div class="container">
      <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.php">Our Banking Management System</a>
+          <a class="navbar-brand" href="index.php">HDFC Internet Banking System</a>
         </div>
         <ul class="nav navbar-nav pull-right">
             <li><a href="user.php">Home</a></li>
@@ -66,13 +76,13 @@
                $acNum = $_POST['acNo'];
                $rs = $obAccount->showBalance($acNum);
 
-               if(mysql_num_rows($rs) < 1) { 
+               if(mysqli_num_rows($rs) < 1) { 
                   ?>
                   <p>Invalid Account Number </p><a href="deposit.php">Try again!</a>
                   <?php
                   die(mysql_error()); // TODO: better error handling
                }       
-               $rowa=mysql_fetch_array($rs);
+               $rowa=mysqli_fetch_array($rs);
             ?>
             
             <table class="table table-striped">
@@ -106,8 +116,8 @@
      </div>
 
      <div class="well">
-      <h3>www.mycompany.com
-         <span class="pull-right">Like Us: www.facebook.com/samy</span>
+      <h3>www.myhdfcbank.com
+         <!-- <span class="pull-right">Like Us: www.facebook.com/samy</span> -->
       </h3>
      </div>   
     

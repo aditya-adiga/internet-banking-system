@@ -14,7 +14,7 @@
     $res1 = $obAccount->createCustomer($cName, $cStreet, $cCity);
     $res2 = $obAccount->openAccount($brName);
     $acc = $obAccount->getAcNumber();
-    $res3 = mysql_query("INSERT INTO depositor(Customer_name, Account_number) VALUES('$cName', '$acc') "); 
+    $res3 = mysqli_query($conn,"INSERT INTO depositor(Customer_name, Account_number) VALUES('$cName', '$acc') "); 
     
     if($res1 && $res2 && $res3)
     {
@@ -49,6 +49,16 @@
 </head>
 
 <body>
+<div style="background-image: url('img_girl.jpg');">
+	<style>
+		body {
+			background-image: url('https://i.pinimg.com/originals/53/aa/f6/53aaf6011bba6d6bb0499e1eef12c26d.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;  
+			background-size: cover;
+		}
+	</style>
+	</div>
    <div class="container">
      <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -86,8 +96,8 @@
           <div class="form-group"><p>Select a Branch
              <select name="brName" id="brid" style="width: 150px;box-sizing: border-box;border-radius: 4px;padding: 4px 0px 4px 0px;font-size: 16px;">
              <?php
-               $rs=mysql_query("select * from branch order by Branch_name");
-               while($row=mysql_fetch_array($rs))
+               $rs=mysqli_query($conn, "select * from branch order by Branch_name");
+               while($row=mysqli_fetch_array($rs))
                {
                  if($row[0]==$brName)
                  {
@@ -107,8 +117,8 @@
      </div>
 
      <div class="well">
-      <h3>www.mycompany.com
-         <span class="pull-right">Like Us: www.facebook.com/samy</span>
+      <h3>www.myhdfcbank.com
+         <!-- <span class="pull-right">Like Us: www.facebook.com/samy</span> -->
       </h3>
      </div>   
     
