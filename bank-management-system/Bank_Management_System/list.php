@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
+  <title>Admin Page</title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <script src="css/jquery.min.js"></script>
   <script src="css/bootstrap.min.js"></script>
@@ -39,11 +39,11 @@
                
                $rs2 = $obAccount->showAllAccountInfo();
 
-               if(mysql_num_rows($rs2) < 1) { 
+               if(mysqli_num_rows($rs2) < 1) { 
                   ?>
                   <p>Invalid Account Number </p><a href="deposit.php">Try again!</a>
                   <?php
-                  die(mysql_error()); // TODO: better error handling
+                  die(mysqli_error($conn)); // TODO: better error handling
                } ?>
 
               <table class="table table-striped">
@@ -56,7 +56,7 @@
                   <td>Branch Name</td>
                   <td>Branch City</td>                  
                 </tr>
-          <?php  while ($row2=mysql_fetch_array($rs2)){
+          <?php  while ($row2=mysqli_fetch_array($rs2)){
             ?>     
               <tr>
                   <th><?php echo $row2[1]; ?></th>
