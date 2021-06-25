@@ -84,7 +84,6 @@
 
      <div class="well">
      	<h3>www.myhdfcbank.com
-     	   <!-- <span class="pull-right">Like Us: www.facebook.com/samy</span> -->
      	</h3>
      </div>   
    	

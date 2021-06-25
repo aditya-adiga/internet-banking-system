@@ -11,13 +11,13 @@
         $this->branchCity = $city;
         $this->assets = $assets;
 
-        $res = mysql_query("INSERT into branch(Branch_name, Branch_city, Assets) VALUES('$this->branchName', '$this->branchCity', '$this->assets')");
+        $res = mysqli_query("INSERT into branch(Branch_name, Branch_city, Assets) VALUES('$this->branchName', '$this->branchCity', '$this->assets')");
 
         return $res;
    	}
 
    	public function getBranch(){
-      $res = mysql_query("select * from branch order by Branch_name");
+      $res = mysqli_query("select * from branch order by Branch_name");
    		return $res;
    	}
 

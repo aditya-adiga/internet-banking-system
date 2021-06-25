@@ -20,13 +20,13 @@
       $obAccount3 = new Account();
       $rs2 = $obAccount3->showBalance($_POST['payee']);
 
-      if(mysql_num_rows($rs2) < 1) { 
+      if(mysqli_num_rows($rs2) < 1) { 
       ?>
         <p>Invalid Account Number </p><a href="deposit.php">Try again!</a>
         <?php
-        die(mysql_error()); // TODO: better error handling
+        die(mysqli_error()); // TODO: better error handling
       }       
-      $row2=mysql_fetch_array($rs2);
+      $row2=mysqli_fetch_array($rs2);
 
       $value2 = $row2[2] + $_POST['tMoney'];
       $res2 = $obAccount2->updateBalance($_POST['payee'], $value2);
@@ -87,13 +87,13 @@
                $acNum = $_POST['acNo'];
                $rs = $obAccount->showBalance($acNum);
 
-               if(mysql_num_rows($rs) < 1) { 
+               if(mysqli_num_rows($rs) < 1) { 
                   ?>
                   <p>Invalid Account Number </p><a href="deposit.php">Try again!</a>
                   <?php
-                  die(mysql_error()); // TODO: better error handling
+                  die(mysqli_error()); // TODO: better error handling
                }       
-               $rowa=mysql_fetch_array($rs);
+               $rowa=mysqli_fetch_array($rs);
             ?>
             
             <table class="table table-striped">
@@ -133,7 +133,6 @@
 
      <div class="well">
       <h3>www.mycompany.com
-         <span class="pull-right">Like Us: www.facebook.com/samy</span>
       </h3>
      </div>   
     

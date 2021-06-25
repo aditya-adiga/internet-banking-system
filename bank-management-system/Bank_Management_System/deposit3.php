@@ -80,7 +80,7 @@
                   ?>
                   <p>Invalid Account Number </p><a href="deposit.php">Try again!</a>
                   <?php
-                  die(mysql_error()); // TODO: better error handling
+                  die(mysqli_error()); // TODO: better error handling
                }       
                $rowa=mysqli_fetch_array($rs);
             ?>
@@ -117,7 +117,6 @@
 
      <div class="well">
       <h3>www.myhdfcbank.com
-         <!-- <span class="pull-right">Like Us: www.facebook.com/samy</span> -->
       </h3>
      </div>   
     

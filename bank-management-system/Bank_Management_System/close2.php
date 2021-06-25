@@ -9,7 +9,7 @@
  
     $res1 = $obAccount2->closeAccount($_SESSION['aNum']);
 
-    $res2 = mysql_query("DELETE FROM depositor WHERE Account_number = '$_SESSION[aNum]'");
+    $res2 = mysqli_query("DELETE FROM depositor WHERE Account_number = '$_SESSION[aNum]'");
     
     if($res2){
         ?>
@@ -66,13 +66,13 @@
                $acNum = $_POST['acNo'];
                $rs = $obAccount->showAccountInfo($acNum);
 
-               if(mysql_num_rows($rs) < 1) { 
+               if(mysqli_num_rows($rs) < 1) { 
                   ?>
                   <p>Invalid Account Number </p><a href="deposit.php">Try again!</a>
                   <?php
-                  die(mysql_error()); // TODO: better error handling
+                  die(mysqli_error()); // TODO: better error handling
                }       
-               $row=mysql_fetch_array($rs);
+               $row=mysqli_fetch_array($rs);
             ?>
             
             <table class="table table-striped">
@@ -122,11 +122,7 @@
       </div>
      </div>
 
-     <div class="well">
-      <h3>www.mycompany.com
-         <span class="pull-right">Like Us: www.facebook.com/samy</span>
-      </h3>
-     </div>   
+      
     
    </div>
 
