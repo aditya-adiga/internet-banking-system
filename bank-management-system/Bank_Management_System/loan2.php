@@ -1,3 +1,6 @@
+<?php
+  include_once 'loan.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +42,7 @@
 
         <div class="panel-body">
           <div style="max-width: 600px; margin: 0 auto">
-            <form action="withdraw2.php" method="post">
+            <form action="" method="post">
               <div class="form-group">
                 <label for="loan_no">Enter Loan No</label>
                 <input type="text" name="loan_no" required class="form-control" />

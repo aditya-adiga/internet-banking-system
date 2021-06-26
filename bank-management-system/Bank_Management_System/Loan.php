@@ -1,6 +1,7 @@
 <?php
    
-   include_once 'Account.php';
+  //  include_once 'Ac count.php';
+   include_once 'Customer.php';
    include("dbConnect.php");
    class Loan extends Customer 
    {

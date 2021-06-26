@@ -44,7 +44,7 @@
             <h4>1. <a href="list.php">All Account Holder's List</a></h4>
             <h4>2. <a href="update.php">Update an Account Information</a></h4>
             <h4>3. <a href="close.php">Close an Account</a></h4>
-            <h4>4. <a href="loan.php">Loan Information</a></h4>
+            <h4>4. <a href="loan2.php">Loan Information</a></h4>
             <h4>5. <a href="addUser.php">Add Employee</a></h4>
           </div>
      	<div class="panel-body">
