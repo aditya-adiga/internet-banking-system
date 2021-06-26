@@ -21,7 +21,7 @@
       if($res2){
       ?>
         <script>
-        alert('Withdraw Succeed...');
+        alert('Withdraw Succeessful...');
         window.location='withdraw.php'
         </script>
         <?php
@@ -117,7 +117,7 @@
                 <input type="text" name="wMoney" required class="form-control" />
               </div>
                 
-              <button type="submit" name="login2" class="btn btn-success">Send</button>
+              <button type="submit" name="login2" class="btn btn-success">Withdraw</button>
             </form>
        </div>
       </div>

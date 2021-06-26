@@ -14,11 +14,21 @@
 </head>
 
 <body>
+  <div style="background-image: url('img_girl.jpg');">
+	<style>
+		body {
+			background-image: url('https://i.pinimg.com/originals/53/aa/f6/53aaf6011bba6d6bb0499e1eef12c26d.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;  
+			background-size: cover;
+		}
+	</style>
+	</div>
    <div class="container">
      <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.php">Our Banking Management System</a>
+          <a class="navbar-brand" href="index.php">HDFC Internet Banking System</a>
         </div>
         <ul class="nav navbar-nav pull-right">
             <li><a href="user.php">Home</a></li>
@@ -74,6 +84,11 @@
                 <td width="35%">Branch City: </td>
                 <th><?php echo $row2[4]; ?></th>
               </tr>
+
+              <tr>
+                <td width="35%">Account Type: </td>
+                <th><?php echo $row2[7]; ?></th>
+              </tr>
               
             </table>
 
@@ -82,7 +97,8 @@
      </div>
 
      <div class="well">
-      <h3>www.mycompany.com
+      <h3>www.myhdfcbank.com
+         <!-- <span class="pull-right">Like Us: www.facebook.com/samy</span> -->
       </h3>
      </div>   
     

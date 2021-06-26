@@ -11,7 +11,7 @@
     // $obCustomer = new Customer();
     $obAccount = new Account();
     // $sl_amnt = 0;
-    $res1 = $obAccount->createCustomer($cName, $cStreet, $cCity);
+    $res1 = $obAccount->createCustomer($cName, $cStreet, $cCity, $acType, $cAdhaar, $cPhone);
     $res2 = $obAccount->openAccount($brName);
     $acc = $obAccount->getAcNumber();
     $res3 = mysqli_query($conn,"INSERT INTO depositor(Customer_name, Account_number) VALUES('$cName', '$acc') "); 
@@ -108,6 +108,22 @@
                }
              ?>
              </select></p>
+          </div>
+
+          <div class="form-group"><p>Account Type
+             <select name="acType" id="brid" style="width: 150px;box-sizing: border-box;border-radius: 4px;padding: 4px 0px 4px 0px;font-size: 16px;">
+               <option value="savings"> Savings Account </option>
+               <option value="current"> Current Account </option>
+               <option value="salary"> Salary Account </option>
+             </select></p>
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="cAdhaar" placeholder="Customer Adhaar Number" required class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="cPhone" placeholder="Customer Phone Number" required class="form-control" />
           </div>
 
           <button type="submit" name="login" class="btn btn-success">Submit</button>

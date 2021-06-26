@@ -57,14 +57,14 @@
     public function showAccountInfo($acNo){
       $this->accNumber = $acNo;
       $conn = mysqli_connect('localhost','root','mysql123','oopbank') or die('localhost connection problem'.mysql_error());
-      $res = mysqli_query($conn, "select d.Customer_name, d.Account_number, a.Balance, b.Branch_name, b.Branch_city, c.Customer_street, c.Customer_city from depositor d, account a, branch b, customer c where d.Account_number = '$this->accNumber' and a.Account_number = '$this->accNumber' and a.Branch_name=b.Branch_name and d.Customer_name=c.Customer_name");
+      $res = mysqli_query($conn, "select d.Customer_name, d.Account_number, a.Balance, b.Branch_name, b.Branch_city, c.Customer_street, c.Customer_city, c.accountType, c.Customer_phone from depositor d, account a, branch b, customer c where d.Account_number = '$this->accNumber' and a.Account_number = '$this->accNumber' and a.Branch_name=b.Branch_name and d.Customer_name=c.Customer_name");
 
       return $res;
     }
 
     public function showAllAccountInfo(){
       $conn = mysqli_connect('localhost','root','mysql123','oopbank') or die('localhost connection problem'.mysql_error());
-      $res = mysqli_query($conn, "select d.Customer_name, d.Account_number, c.Customer_street, c.Customer_city, a.Balance, b.Branch_name, b.Branch_city from depositor d, account a, branch b, customer c where d.Account_number = a.Account_number and d.Customer_name = c.Customer_name and a.Branch_name=b.Branch_name order by d.Account_number");
+      $res = mysqli_query($conn, "select d.Customer_name, d.Account_number, c.Customer_street, c.Customer_city ,a.Balance, b.Branch_name, b.Branch_city, c.Customer_phone, c.accountType from depositor d, account a, branch b, customer c where d.Account_number = a.Account_number and d.Customer_name = c.Customer_name and a.Branch_name=b.Branch_name order by d.Account_number");
 
       return $res;      
     }

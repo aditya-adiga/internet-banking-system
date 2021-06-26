@@ -14,11 +14,21 @@
 </head>
 
 <body>
+  <div style="background-image: url('img_girl.jpg');">
+	<style>
+		body {
+			background-image: url('https://i.pinimg.com/originals/53/aa/f6/53aaf6011bba6d6bb0499e1eef12c26d.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;  
+			background-size: cover;
+		}
+	</style>
+	</div>
    <div class="container">
      <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.php">Our Banking Management System</a>
+          <a class="navbar-brand" href="index.php">HDFC Internet Banking System</a>
         </div>
         <ul class="nav navbar-nav pull-right">
             <li><a href="admin2.php">Home</a></li>
@@ -30,7 +40,7 @@
 
      <div class="panel panel-default">
       <div class="panel-heading">
-        <h2>Account's Information</h2>
+        <h2>Accounts Information</h2>
       </div>
 
       <div class="panel-body">
@@ -54,7 +64,9 @@
                   <td>Customer City</td>
                   <td>Balance</td>
                   <td>Branch Name</td>
-                  <td>Branch City</td>                  
+                  <td>Branch City</td>   
+                  <td>Customer Phone Number</td>               
+                  <td>Account Type</td>               
                 </tr>
           <?php  while ($row2=mysqli_fetch_array($rs2)){
             ?>     
@@ -66,6 +78,9 @@
                   <th><?php echo $row2[4]; ?></th>
                   <th><?php echo $row2[5]; ?></th>
                   <th><?php echo $row2[6]; ?></th>
+                  <th><?php echo $row2[7]; ?></th>
+                  <th><?php echo $row2[8]; ?></th>
+
               </tr>
               <?php } ?>
             </table>

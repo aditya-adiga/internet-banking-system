@@ -14,7 +14,7 @@
     if($res2){
         ?>
         <script>
-        alert('Balance is Depositted Successfully...');
+        alert('Amount Depositted Successfully...');
         window.location='deposit.php'
         </script>
         <?php

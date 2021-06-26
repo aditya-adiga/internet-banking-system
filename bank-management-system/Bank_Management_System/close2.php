@@ -8,8 +8,9 @@
     $obAccount2 = new Account();
  
     $res1 = $obAccount2->closeAccount($_SESSION['aNum']);
+    $conn = mysqli_connect('localhost','root','mysql123','oopbank') or die('localhost connection problem'.mysql_error());
 
-    $res2 = mysqli_query("DELETE FROM depositor WHERE Account_number = '$_SESSION[aNum]'");
+    $res2 = mysqli_query($conn, "DELETE FROM depositor WHERE Account_number = '$_SESSION[aNum]'");
     
     if($res2){
         ?>
@@ -40,11 +41,21 @@
 </head>
 
 <body>
+  <div style="background-image: url('img_girl.jpg');">
+	<style>
+		body {
+			background-image: url('https://i.pinimg.com/originals/53/aa/f6/53aaf6011bba6d6bb0499e1eef12c26d.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;  
+			background-size: cover;
+		}
+	</style>
+	</div>
    <div class="container">
      <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.php">Our Banking Management System</a>
+          <a class="navbar-brand" href="index.php">HDFC Internet Banking System</a>
         </div>
         <ul class="nav navbar-nav pull-right">
             <li><a href="admin2.php">Home</a></li>
@@ -56,7 +67,7 @@
 
      <div class="panel panel-default">
       <div class="panel-heading">
-        <h2>Deposit Money</h2>
+        <h2>Account Details</h2>
       </div>
 
       <div class="panel-body">
@@ -108,6 +119,16 @@
               <tr>
                 <td width="35%">Customer City: </td>
                 <th><?php echo $row[6]; ?></th>
+              </tr>
+
+              <tr>
+                <td width="35%">Account Type: </td>
+                <th><?php echo $row[7]; ?></th>
+              </tr>
+
+              <tr>
+                <td width="35%">Customer Phone Number: </td>
+                <th><?php echo $row[8]; ?></th>
               </tr>
              
               
