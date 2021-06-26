@@ -1,5 +1,26 @@
 <?php
   include_once 'loan.php';
+  $obLoan = new Loan();
+               $loanNumber = $_POST['loan_no'];
+               $branchName = $_POST['branch'];
+               $amount = $_POST['Amount'];
+               $rs = $obLoan->createLoan($loanNumber,$branchName,$amount);
+               if($rs){
+                ?>
+                  <script>
+                  alert('loan Succeessful...');
+                  window.location='loan2.php'
+                  </script>
+                  <?php
+                } else {
+                  ?>
+                  <script>
+                  alert('error with loan...');
+                  window.location='loan2.php'
+                  </script>
+                  <?php
+                }
+
 ?>
 <!DOCTYPE html>
 <html>

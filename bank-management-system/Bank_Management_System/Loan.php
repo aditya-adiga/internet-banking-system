@@ -9,7 +9,7 @@
    	private $branchName;
    	private $amount;
 
-    public function createLoan($brName){  //public function opeAccount($number)
+    public function createLoan($loanNumber,$branchName,$amount){  //public function opeAccount($number)
   		$this->amount = 0;
         
       $res = mysqli_query("insert into lc set name = 'Asif'");
