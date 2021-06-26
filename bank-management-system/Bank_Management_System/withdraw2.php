@@ -4,7 +4,8 @@
   include("dbConnect.php");
 ?>
 <?php
-  if (isset($_POST['login2'])) {
+$res = mysqli_query($conn, "SELECT Pass from user WHERE Account_no='$this->accNumber'");
+  if (isset($_POST['login2']) && $_POST['pass']==$res) {
     $obAccount2 = new Account();
     if($_SESSION['bal'] - $_POST['wMoney'] < 500){
       ?>
