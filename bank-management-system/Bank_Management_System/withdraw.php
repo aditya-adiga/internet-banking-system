@@ -45,8 +45,8 @@
                 <input type="text" name="acNo" required class="form-control" />
               </div>
               <div class="form-group">
-                <label for="Password">Enter Account Number</label>
-                <input type="text" name="pass" required class="form-control" />
+                <label for="Password">Enter Password</label>
+                <input type="password" name="pass" required class="form-control" />
               </div>
 
               <button type="submit" name="login" class="btn btn-success">Confirm</button>
