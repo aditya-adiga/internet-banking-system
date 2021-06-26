@@ -1,5 +1,6 @@
 <?php
   include_once 'loan.php';
+  if (isset($_POST['login2'])) {
   $obLoan = new Loan();
                $loanNumber = $_POST['loan_no'];
                $branchName = $_POST['branch'];
@@ -19,7 +20,8 @@
                   window.location='loan2.php'
                   </script>
                   <?php
-                }
+                }}
+                
 
 ?>
 <!DOCTYPE html>
