@@ -1,6 +1,6 @@
 <?php
   include_once 'loan.php';
-  if (isset($_POST['login2'])) {
+  if (isset($_POST['login'])) {
   $obLoan = new Loan();
                $loanNumber = $_POST['loan_no'];
                $branchName = $_POST['branch'];
@@ -21,7 +21,7 @@
                   </script>
                   <?php
                 }}
-                
+
 
 ?>
 <!DOCTYPE html>
