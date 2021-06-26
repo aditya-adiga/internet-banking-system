@@ -10,22 +10,23 @@
    	private $amount;
 
     public function createLoan($loanNumber,$branchName,$amount){  //public function opeAccount($number)
-  		$this->amount = 0;
+  		$this->amount = $amount;
         
-      $res = mysqli_query("insert into lc set name = 'Asif'");
-   	  $sql = mysqli_query("select * from lc");
-   	  while ($row=mysqli_fetch_array($sql)) {
-   		$x = $row[0];
-   	  }
+      $conn = mysqli_connect('localhost','root','mysql123','oopbank') or die('localhost connection problem'.mysql_error());
+      // $res = mysqli_query($conn, "insert into lc set name = 'Asif'");
+   	  // $sql = mysqli_query($conn, "select * from lc");
+   	  // while ($row=mysqli_fetch_array($sql)) {
+   		// $x = $row[0];
+   	  // }
 
-   	  $sql2 = mysqli_query("select concat('LN-', id) as id from ac where id = '$x'");
-      $row2 = mysqli_fetch_row($sql2);
+   	  // $sql2 = mysqli_query($conn, "select concat('LN-', id) as id from ac where id = '$x'");
+      // $row2 = mysqli_fetch_row($sql2);
 
-      $this->loanNumber = $row2[0];
+      $this->loanNumber = $loanNumber;
          
       $this->branchName = $branchName;
 
-      $res = mysqli_query("INSERT into loan(Loan_number, Branch_name, Amount) VALUES('$this->loanNumber', '$this->branchName', '$this->amount')");
+      $res = mysqli_query($conn, "INSERT into loan(Loan_number, Branch_name, Amount) VALUES('$this->loanNumber', '$this->branchName', '$this->amount')");
 
         return $res;
   	}

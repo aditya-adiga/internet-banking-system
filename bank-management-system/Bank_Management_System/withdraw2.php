@@ -88,7 +88,7 @@
                   ?>
                   <p>Invalid Account Number </p><a href="deposit.php">Try again!</a>
                   <?php
-                  die(mysqli_error()); // TODO: better error handling
+                  die(mysqli_error($conn)); // TODO: better error handling
                }       
                $rowa=mysqli_fetch_array($rs);
             ?>

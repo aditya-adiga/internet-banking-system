@@ -51,7 +51,7 @@
           <a class="navbar-brand" href="index.php">HDFC Internet Banking System</a>
         </div>
         <ul class="nav navbar-nav pull-right">
-            <li><a href="user.php">Home</a></li>
+            <li><a href="admin2.php">Home</a></li>
                 <li><a href="logout.php">Logout</a></li>
           
         </ul>

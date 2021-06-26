@@ -38,7 +38,7 @@
 
      <div class="panel panel-default">
      	<div class="panel-heading">
-     		<h2>WElCOME! Mr. <?php echo $_SESSION['name']; ?></h2>
+     		<h2>WElCOME!</h2>
      	</div>
           <div style="max-width: 250px; margin: 0 auto">
             <h4>1. <a href="open.php">Open an Acccount</a></h4>
